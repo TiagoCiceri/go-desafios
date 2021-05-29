@@ -7,7 +7,7 @@ import (
 	"github.com/TiagoCiceri/go-desafios/domain"
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
-	_ "github.com/lib/pg"
+	_ "github.com/lib/pq"
 )
 
 func ConnectDB() *gorm.DB {
@@ -16,9 +16,10 @@ func ConnectDB() *gorm.DB {
 
 	if err != nil {
 		log.Fatalf("Error loading .env file")
+		panic(err)
 	}
 
-	dsn := os.Getenv("dns")
+	dsn := os.Getenv("dsn")
 
 	db, err := gorm.Open("postgres", dsn)
 

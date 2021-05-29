@@ -40,7 +40,6 @@ func (user *User) Prepare() error {
 	}
 
 	return nil
-
 }
 
 //Se o nome da função iniciar com minuscula significa privada - e maiuscula é publica

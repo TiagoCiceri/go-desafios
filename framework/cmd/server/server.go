@@ -15,7 +15,7 @@ func main() {
 
 	user := domain.User{
 		Name:     "Tiago",
-		Email:    "tiago@gmail.com",
+		Email:    "tiago2@gmail.com",
 		Password: "123",
 	}
 
@@ -26,5 +26,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(result)
+	fmt.Println(result.Name, result.Email, result.Token)
 }
